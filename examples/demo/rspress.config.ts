@@ -24,7 +24,7 @@ export default defineConfig({
 	plugins: [
 		pluginThirdParties({
 			googleAnalytics: {
-				gaId: "",
+				gaId: "GA-ID",
 			},
 		}),
 	],

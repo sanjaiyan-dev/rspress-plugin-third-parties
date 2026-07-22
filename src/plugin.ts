@@ -28,16 +28,16 @@ export function pluginThirdParties(
 			path.join(getDirname(), "GlobalGoogleAnalytics.js"),
 		);
 	}
-
+	const gaConfigDefine = options.googleAnalytics
+		? JSON.stringify(JSON.stringify(options.googleAnalytics))
+		: "null";
 	return {
 		name: "rspress-plugin-third-parties",
 		globalUIComponents,
 		builderConfig: {
 			source: {
 				define: {
-					"process.env.RSPRESS_GA_CONFIG": options.googleAnalytics
-						? options.googleAnalytics
-						: null,
+					"process.env.RSPRESS_GA_CONFIG": gaConfigDefine,
 				},
 			},
 		},
