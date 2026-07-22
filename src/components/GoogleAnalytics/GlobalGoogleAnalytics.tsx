@@ -1,4 +1,3 @@
-import React from "react";
 import { GoogleAnalytics } from "./index";
 
 export default function GlobalGoogleAnalytics() {

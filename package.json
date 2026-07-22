@@ -1,7 +1,7 @@
 {
 	"name": "rspress-plugin-third-parties",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Optimized third-party components (YouTube, Google Maps, GA) and script loading strategies for Rspress.",
 	"scripts": {
 		"dev": "rslib build --watch",
 		"build": "rslib build",
@@ -11,12 +11,22 @@
 		"typecheck": "tsc --noEmit",
 		"release": "pnpm build && changeset publish"
 	},
-	"keywords": [],
+	"keywords": [
+		"rspress",
+		"rspress-plugin",
+		"react",
+		"analytics",
+		"google-analytics",
+		"youtube",
+		"embed",
+		"performance"
+	],
 	"author": {
 		"name": "Sanjaiyan Parthipan",
 		"url": "https://github.com/sanjaiyan-dev"
 	},
 	"license": "MIT",
+	"homepage": "https://github.com/sanjaiyan-dev/rspress-plugin-third-parties#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/sanjaiyan-dev/rspress-plugin-third-parties.git"
@@ -36,7 +46,7 @@
 		}
 	},
 	"type": "module",
-	"main": "./dist/cjs/index.js",
+	"main": "./dist/cjs/index.cjs",
 	"module": "./dist/esm/index.js",
 	"types": "./dist/esm/index.d.ts",
 	"files": [
@@ -51,7 +61,7 @@
 			},
 			"require": {
 				"types": "./dist/cjs/index.d.ts",
-				"default": "./dist/cjs/index.js"
+				"default": "./dist/cjs/index.cjs"
 			}
 		}
 	},
@@ -71,6 +81,7 @@
 		"typescript": "^7.0.2"
 	},
 	"peerDependencies": {
+		"@rspress/core": ">=2.0.0",
 		"react": "^18.0.0 || ^19.0.0",
 		"react-dom": "^18.0.0 || ^19.0.0"
 	},
