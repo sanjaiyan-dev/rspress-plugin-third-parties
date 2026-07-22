@@ -1,6 +1,6 @@
 {
 	"name": "rspress-plugin-third-parties",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Optimized third-party components (YouTube, Google Maps, GA) and script loading strategies for Rspress.",
 	"scripts": {
 		"dev": "rslib build --watch",
