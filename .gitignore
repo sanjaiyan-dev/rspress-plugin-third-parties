@@ -2,12 +2,13 @@
 node_modules/
 .pnpm-store/
 
-# Build & Cache Outputs
+# Build & Compilation Outputs
 dist/
-doc_build/
+build/
+.out/
 .rsbuild/
-.rslib/
 .rspress/
+*.tsbuildinfo
 
 # Logs
 npm-debug.log*
@@ -15,14 +16,19 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment & Local Secrets
+# Environment & Local Configuration
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
-# IDE & Code Editors
+# IDEs & Code Editors
 .vscode/*
 !.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 !.vscode/extensions.json
 .idea/
 *.suo
@@ -31,7 +37,7 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# macOS / OS generated files
+# Operating System Files
 .DS_Store
 .DS_Store?
 ._*
@@ -40,5 +46,7 @@ pnpm-debug.log*
 ehthumbs.db
 Thumbs.db
 
-# TypeScript
-*.tsbuildinfo
+# Testing & Cache
+coverage/
+.nyc_output/
+.cache/
