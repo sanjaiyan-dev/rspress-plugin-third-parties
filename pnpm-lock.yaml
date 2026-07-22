@@ -207,6 +207,9 @@ importers:
 
   .:
     dependencies:
+      react-compiler-runtime:
+        specifier: 0.0.0-experimental-a1856f3-20260507
+        version: 0.0.0-experimental-a1856f3-20260507(react@19.2.8)
       third-party-capital:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1467,6 +1470,11 @@ packages:
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  react-compiler-runtime@0.0.0-experimental-a1856f3-20260507:
+    resolution: {integrity: sha512-2UOQV9KDc/W7/aIFp+Y817a4nOoj9kWjvg3dVrlTb9I9dtXyMgC6/FnaWRYE50xOwJbbz2h/v6vemVu1u1ZaBQ==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
 
   react-dom@19.2.8:
     resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
@@ -3357,6 +3365,10 @@ snapshots:
   quansync@0.2.11: {}
 
   queue-microtask@1.2.3: {}
+
+  react-compiler-runtime@0.0.0-experimental-a1856f3-20260507(react@19.2.8):
+    dependencies:
+      react: 19.2.8
 
   react-dom@19.2.8(react@19.2.8):
     dependencies:

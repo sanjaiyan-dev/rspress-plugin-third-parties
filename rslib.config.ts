@@ -23,7 +23,9 @@ export default defineConfig({
 	],
 	plugins: [
 		pluginReact({
-			reactCompiler: true,
+			reactCompiler: {
+				target: "18",
+			},
 		}),
 	],
 });
