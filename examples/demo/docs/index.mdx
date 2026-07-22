@@ -1,51 +1,72 @@
-import { GoogleMapsEmbed, YouTubeEmbed, Script } from 'rspress-plugin-third-parties';
+---
+pageType: home
+title: Rspress Third Parties
+titleSuffix: 'Zero Main-Thread Blocking Third-Party Integrations'
 
-# rspress-plugin-third-parties Demo
+hero:
+  name: Rspress Third Parties
+  text: High-Performance Third-Party Integrations
+  tagline: Zero main-thread blocking YouTube, Google Maps, GA4, GTM & custom script strategies built for React 19 & React Compiler.
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /readme
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/sanjaiyan-dev/rspress-plugin-third-parties
 
-
-
-Welcome to the live interactive demo site for **`rspress-plugin-third-parties`**!
-
+features:
+  - title: '⚡ Zero Main-Thread Blocking'
+    details: Defers heavy third-party scripts via requestIdleCallback and lazy loading strategies to preserve 100/100 Lighthouse performance.
+    icon: 🚀
+  - title: '🧠 React Compiler Pre-Optimized'
+    details: Ships pre-compiled with React 19 auto-memoization at build time for instant client-side rendering with zero runtime overhead.
+    icon: ⚡
+  - title: '🗺️ Media & Location Embeds'
+    details: High-performance, zero-layout-shift components for YouTube, Google Maps (Point Pedro!), GA4, and Google Tag Manager.
+    icon: 🎬
+  - title: '📊 Zero-Config Global GA'
+    details: Auto-inject Google Analytics across all documentation pages automatically with a single line in your rspress.config.ts.
+    icon: 📈
+  - title: '📦 React 19 Resource Pre-init'
+    details: Native ReactDOM.preinit and ReactDOM.preload integration during SSG builds with automatic script deduplication.
+    icon: 🛡️
+  - title: '🎯 Clean Subpath Architecture'
+    details: Browser components are strictly isolated from Node.js build logic to prevent bundler pollution and runtime crashes.
+    icon: 🧩
 ---
 
-## 🗺️ Live Google Maps Embed
+import { YouTubeEmbed, GoogleMapsEmbed, Script } from 'rspress-plugin-third-parties';
 
-<GoogleMapsEmbed 
-  apiKey="YOUR_API_KEY" 
-  mode="place" 
-  q="Point Pedro, Sri Lanka" 
-  height={400} 
-  zoom="14"
-/>
+<div className="overview-container" style={{ marginTop: '3rem' }}>
 
-```mdx
-import { GoogleMapsEmbed } from 'rspress-plugin-third-parties';
+## 🎬 Live Components Demo
 
-<GoogleMapsEmbed 
-  apiKey="YOUR_API_KEY" 
-  mode="place" 
-  q="Point Pedro, Sri Lanka" 
-  height={400} 
-  zoom="14"
-/>
-```
-
----
-
-## 🎬 Lazy-Loaded YouTube Player
-
+### 1. Lazy-Loaded YouTube Player
 <YouTubeEmbed 
   videoid="sSbDtQTtwBY" 
   height={400} 
-  playlabel="Play Rspress Demo" 
+  playlabel="A Lineage of Logic, A Future of Code" 
 />
 
 ---
 
-## ⚡ Custom Script Component
+### 2. Google Maps (Point Pedro, Sri Lanka)
+<GoogleMapsEmbed 
+  apiKey="YOUR_GOOGLE_MAPS_API_KEY" 
+  mode="place" 
+  q="Point Pedro, Sri Lanka" 
+  height={400} 
+  zoom="14" 
+/>
 
+---
+
+### 3. Custom Script Execution (`lazyOnload`)
 <Script 
-  id="san-web-maker-demo"
+  id="san-web-maker-home"
   src="https://sanjaiyan-cool.web.app/script/v1/1/SanWebMaker.js" 
   strategy="lazyOnload" 
 />
+
+</div>

@@ -5,6 +5,7 @@ import { pluginThirdParties } from "rspress-plugin-third-parties/plugin";
 export default defineConfig({
 	root: path.join(__dirname, "docs"),
 	title: "Rspress Third Parties Demo",
+	base: "/rspress-plugin-third-parties/",
 	description: "Live interactive playground for rspress-plugin-third-parties",
 	icon: "https://avatars.githubusercontent.com/u/88643231",
 	logo: {
