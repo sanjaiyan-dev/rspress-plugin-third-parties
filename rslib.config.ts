@@ -5,7 +5,8 @@ export default defineConfig({
 	source: {
 		entry: {
 			index: "./src/index.ts",
-			GlobalGoogleAnalytics: "./src/components/GlobalGoogleAnalytics.tsx",
+			GlobalGoogleAnalytics:
+				"./src/components/GoogleAnalytics/GlobalGoogleAnalytics.tsx",
 		},
 	},
 	lib: [

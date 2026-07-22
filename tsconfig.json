@@ -8,7 +8,8 @@
 		"strict": true,
 		"skipLibCheck": true,
 		"isolatedModules": true,
-		"declaration": true
+		"declaration": true,
+		"rootDir": "./src"
 	},
 	"include": ["src"]
 }

@@ -1,80 +1,80 @@
 {
-  "name": "rspress-plugin-third-parties",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "dev": "rslib build --watch",
-    "build": "rslib build",
-    "format": "biome format --write .",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "typecheck": "tsc --noEmit",
-    "release": "pnpm build && changeset publish"
-  },
-  "keywords": [],
-  "author": {
-    "name": "Sanjaiyan Parthipan",
-    "url": "https://github.com/sanjaiyan-dev"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sanjaiyan-dev/rspress-plugin-third-parties.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/issues"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "11.10.0",
-      "onFail": "download"
-    }
-  },
-  "type": "module",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
-    }
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.5.5",
-    "@changesets/cli": "^2.31.1",
-    "@rsbuild/plugin-react": "^2.1.0",
-    "@rslib/core": "^0.23.2",
-    "@rspress/core": "^2.0.18",
-    "@rspress/shared": "^2.0.18",
-    "@types/node": "^26.1.1",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "babel-plugin-react-compiler": "^1.0.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "typescript": "^7.0.2"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
-  },
-  "dependencies": {
-    "third-party-capital": "^3.0.0"
-  }
+	"name": "rspress-plugin-third-parties",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "rslib build --watch",
+		"build": "rslib build",
+		"format": "biome format --write .",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"typecheck": "tsc --noEmit",
+		"release": "pnpm build && changeset publish"
+	},
+	"keywords": [],
+	"author": {
+		"name": "Sanjaiyan Parthipan",
+		"url": "https://github.com/sanjaiyan-dev"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sanjaiyan-dev/rspress-plugin-third-parties.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "11.10.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/esm/index.d.ts",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/index.d.ts",
+				"default": "./dist/cjs/index.js"
+			}
+		}
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.5",
+		"@changesets/cli": "^2.31.1",
+		"@rsbuild/plugin-react": "^2.1.0",
+		"@rslib/core": "^0.23.2",
+		"@rspress/core": "^2.0.18",
+		"@rspress/shared": "^2.0.18",
+		"@types/node": "^26.1.1",
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"babel-plugin-react-compiler": "^1.0.0",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"typescript": "^7.0.2"
+	},
+	"peerDependencies": {
+		"react": "^18.0.0 || ^19.0.0",
+		"react-dom": "^18.0.0 || ^19.0.0"
+	},
+	"dependencies": {
+		"third-party-capital": "^3.0.0"
+	}
 }

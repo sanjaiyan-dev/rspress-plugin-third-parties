@@ -2,10 +2,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { RspressPlugin } from "@rspress/core";
 
-export * from "./components/GoogleAnalytics";
-export * from "./components/GoogleMapsEmbed";
+export * from "./components/GoogleAnalytics/index";
 export * from "./components/Script";
-export * from "./components/YouTubeEmbed";
 
 export interface ThirdPartiesPluginOptions {
 	googleAnalytics?: {
