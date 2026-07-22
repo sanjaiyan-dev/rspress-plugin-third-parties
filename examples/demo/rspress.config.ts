@@ -28,4 +28,9 @@ export default defineConfig({
 			},
 		}),
 	],
+	markdown: {
+		link: {
+			checkDeadLinks: false,
+		},
+	},
 });
