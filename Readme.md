@@ -33,23 +33,24 @@ External embeds (like YouTube and Google Maps) and script tags (like GA4 and GTM
 
 ## 📑 Table of Contents
 
-- [Installation](#-installation)
-- [Plugin Registration](#-plugin-registration)
-- [Component Reference](#-component-reference)
-  - [`<Script />`](#-script-)
-  - [`<YouTubeEmbed />`](#-youtubeembed-)
-  - [`<GoogleMapsEmbed />`](#-googlemapsembed-)
-  - [`<GoogleAnalytics />`](#-googleanalytics-)
-  - [`<GoogleTagManager />`](#-googletagmanager-)
-- [Event Tracking Utility](#-event-tracking-utility)
-- [Script Loading Strategies](#-script-loading-strategies)
-- [Under the Hood Mechanics](#-under-the-hood-mechanics)
-- [License](#-license)
+- [Installation](#installation)
+- [Plugin Registration](#plugin-registration)
+- [Component Reference](#component-reference)
+  - [`<Script />`](#script-)
+  - [`<YouTubeEmbed />`](#youtubeembed-)
+  - [`<GoogleMapsEmbed />`](#googlemapsembed-)
+  - [`<GoogleAnalytics />`](#googleanalytics-)
+  - [`<GoogleTagManager />`](#googletagmanager-)
+- [Event Tracking Utility](#event-tracking-utility)
+- [Script Loading Strategies](#script-loading-strategies)
+- [Under the Hood Mechanics](#under-the-hood-mechanics)
+- [License](#license)
 
 ---
 
 ## 📦 Installation
 
+<a id="installation"></a>
 Install via your preferred package manager:
 
 ```bash
@@ -66,6 +67,8 @@ yarn add rspress-plugin-third-parties
 ---
 
 ## 🔌 Plugin Registration
+
+<a id="plugin-registration"></a>
 
 To auto-inject **Google Analytics** globally across your Rspress documentation, register the plugin in your `rspress.config.ts`:
 
@@ -91,6 +94,8 @@ export default defineConfig({
 
 ## 🧩 Component Reference
 
+<a id="component-reference"></a>
+
 ### `<Script />`
 
 The foundation component powering all external integrations. It manages script mounting, deduplication, inline scripts, stylesheet preloading, and lifecycle events (`onLoad`, `onReady`, `onError`).
@@ -99,6 +104,7 @@ The foundation component powering all external integrations. It manages script m
 import { Script } from "rspress-plugin-third-parties";
 
 {/* Load after interactive */}
+
 <Script
   src="https://sanjaiyan-cool.web.app/script/v1/1/SanWebMaker.js"
   strategy="afterInteractive"
@@ -173,17 +179,17 @@ import { GoogleMapsEmbed } from "rspress-plugin-third-parties";
 
 #### `<GoogleMapsEmbed />` Props
 
-| Prop       | Type                                                            | Default      | Description                                     |
-| :--------- | :-------------------------------------------------------------- | :----------- | :---------------------------------------------- |
-| `apiKey`   | `string`                                                        | **Required** | Your Google Maps Embed API key.                 |
-| `mode`     | `"place" \| "view" \| "directions" \| "streetview" \| "search"` | **Required** | Embed mode.                                     |
-| `q`        | `string`                                                        | —            | Map search query or location place name.        |
+| Prop       | Type                                                            | Default      | Description                                    |
+| :--------- | :-------------------------------------------------------------- | :----------- | :--------------------------------------------- |
+| `apiKey`   | `string`                                                        | **Required** | Your Google Maps Embed API key.                |
+| `mode`     | `"place" \| "view" \| "directions" \| "streetview" \| "search"` | **Required** | Embed mode.                                    |
+| `q`        | `string`                                                        | —            | Map search query or location place name.       |
 | `center`   | `string`                                                        | —            | Lat/lng center point (`"9.814937,81.166080"`). |
-| `zoom`     | `string`                                                        | —            | Map zoom level (`0` to `21`).                   |
-| `maptype`  | `"roadmap" \| "satellite"`                                      | `'roadmap'`  | Map rendering mode.                             |
-| `language` | `string`                                                        | —            | Map language code (e.g. `'ta'`, `'en'`).        |
-| `region`   | `string`                                                        | —            | Regional country code.                          |
-| `loading`  | `"eager" \| "lazy"`                                             | `'lazy'`     | Native iframe loading attribute.                |
+| `zoom`     | `string`                                                        | —            | Map zoom level (`0` to `21`).                  |
+| `maptype`  | `"roadmap" \| "satellite"`                                      | `'roadmap'`  | Map rendering mode.                            |
+| `language` | `string`                                                        | —            | Map language code (e.g. `'ta'`, `'en'`).       |
+| `region`   | `string`                                                        | —            | Regional country code.                         |
+| `loading`  | `"eager" \| "lazy"`                                             | `'lazy'`     | Native iframe loading attribute.               |
 
 ---
 
@@ -305,4 +311,3 @@ function FeedbackButton() {
 ## 📄 License
 
 [MIT](./LICENSE) © [Sanjaiyan Parthipan](https://github.com/sanjaiyan-dev)
-
