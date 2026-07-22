@@ -1,8 +1,9 @@
 "use client";
 
-import ReactDOM from "react-dom";
-import React, { useEffect, useRef } from "react";
+import type React from "react";
 import type { ScriptHTMLAttributes } from "react";
+import { useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
 import { requestIdleCallback, setAttributesFromProps } from "./utils";
 
 // Cache to prevent duplicate loads of the same network scripts
@@ -135,7 +136,7 @@ const loadScript = (props: ScriptProps): void => {
 			}
 			afterLoad();
 		});
-		el.addEventListener("error", function (e) {
+		el.addEventListener("error", (e) => {
 			// Remove from cache on load failure so subsequent attempts can retry
 			if (src) {
 				ScriptCache.delete(src);

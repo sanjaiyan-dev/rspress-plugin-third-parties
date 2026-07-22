@@ -9,7 +9,7 @@ export type GAParams = {
 	nonce?: string;
 };
 
-let currDataLayerName: string | undefined = undefined;
+let currDataLayerName: string | undefined;
 
 export function GoogleAnalytics(props: GAParams) {
 	const { gaId, debugMode, dataLayerName = "dataLayer", nonce } = props;

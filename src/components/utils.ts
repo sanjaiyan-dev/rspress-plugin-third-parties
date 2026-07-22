@@ -2,25 +2,21 @@ export const requestIdleCallback =
 	(typeof self !== "undefined" &&
 		self.requestIdleCallback &&
 		self.requestIdleCallback.bind(window)) ||
-	function (cb: IdleRequestCallback): number {
-		let start = Date.now();
-		return self.setTimeout(function () {
+	((cb: IdleRequestCallback): number => {
+		const start = Date.now();
+		return self.setTimeout(() => {
 			cb({
 				didTimeout: false,
-				timeRemaining: function () {
-					return Math.max(0, 50 - (Date.now() - start));
-				},
+				timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
 			});
 		}, 1);
-	};
+	});
 
 export const cancelIdleCallback =
 	(typeof self !== "undefined" &&
 		self.cancelIdleCallback &&
 		self.cancelIdleCallback.bind(window)) ||
-	function (id: number) {
-		return clearTimeout(id);
-	};
+	((id: number) => clearTimeout(id));
 
 const DOMAttributeNames: Record<string, string> = {
 	acceptCharset: "accept-charset",
@@ -48,7 +44,7 @@ function isBooleanScriptAttribute(
 
 export function setAttributesFromProps(el: HTMLElement, props: object) {
 	for (const [p, value] of Object.entries(props)) {
-		if (!Object.prototype.hasOwnProperty.call(props, p)) continue;
+		if (!Object.hasOwn(props, p)) continue;
 		if (ignoreProps.includes(p)) continue;
 		if (value === undefined) continue;
 
