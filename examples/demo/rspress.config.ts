@@ -21,11 +21,11 @@ export default defineConfig({
 			},
 		],
 	},
-    plugins: [
-        pluginThirdParties({
-            googleAnalytics: {
-                gaId: ""
-            }
-        })
-    ]
+	plugins: [
+		pluginThirdParties({
+			googleAnalytics: {
+				gaId: "",
+			},
+		}),
+	],
 });

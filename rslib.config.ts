@@ -5,7 +5,7 @@ export default defineConfig({
 	source: {
 		entry: {
 			index: "./src/index.ts",
-              plugin: './src/plugin.ts',
+			plugin: "./src/plugin.ts",
 			GlobalGoogleAnalytics:
 				"./src/components/GoogleAnalytics/GlobalGoogleAnalytics.tsx",
 		},

@@ -36,8 +36,8 @@ export function pluginThirdParties(
 			source: {
 				define: {
 					"process.env.RSPRESS_GA_CONFIG": options.googleAnalytics
-						? JSON.stringify(options.googleAnalytics)
-						: "null",
+						? options.googleAnalytics
+						: null,
 				},
 			},
 		},

@@ -58,7 +58,7 @@
 				"default": "./dist/index.cjs"
 			}
 		},
-    "./plugin": {
+		"./plugin": {
 			"import": {
 				"types": "./dist/plugin.d.ts",
 				"default": "./dist/plugin.js"
