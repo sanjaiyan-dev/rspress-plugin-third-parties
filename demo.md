@@ -24,7 +24,30 @@ import { GoogleMapsEmbed } from 'rspress-plugin-third-parties';
 ## 🎬 Lazy-Loaded YouTube Player
 
 
+```mdx
+import { YouTubeEmbed } from 'rspress-plugin-third-parties';
+
+<YouTubeEmbed 
+  videoid="sSbDtQTtwBY" 
+  height={400} 
+  playlabel="Play Rspress Demo" 
+/>
+```
+
 ***
 
 ## ⚡ Custom Script Component
 
+
+```mdx
+import { Script } from 'rspress-plugin-third-parties';
+
+<Script 
+  id="san-web-maker-demo"
+  src="https://sanjaiyan-cool.web.app/script/v1/1/SanWebMaker.js" 
+  strategy="lazyOnload" 
+  onReady={() => {
+    window?.sanScrollTop?.("👆", "#00001c")
+  }}
+/>
+```
