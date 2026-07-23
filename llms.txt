@@ -1,0 +1,8 @@
+# Rspress Third Parties Demo
+
+> Live interactive playground for rspress-plugin-third-parties
+
+## Others
+
+- [rspress-plugin-third-parties Demo](/rspress-plugin-third-parties/demo.md): Welcome to the live interactive demo site for rspress-plugin-third-parties!
+- [rspress-plugin-third-parties](/rspress-plugin-third-parties/readme.md)
