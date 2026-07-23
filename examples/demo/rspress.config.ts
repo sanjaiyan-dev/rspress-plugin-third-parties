@@ -6,6 +6,7 @@ export default defineConfig({
 	root: path.join(__dirname, "docs"),
 	title: "Rspress Third Parties Demo",
 	base: "/rspress-plugin-third-parties/",
+	llms: true,
 	description: "Live interactive playground for rspress-plugin-third-parties",
 	icon: "https://avatars.githubusercontent.com/u/88643231",
 	logo: {
@@ -20,7 +21,14 @@ export default defineConfig({
 				content:
 					"https://github.com/sanjaiyan-dev/rspress-plugin-third-parties",
 			},
+			{
+				icon: "instagram",
+				mode: "link",
+				content: "https://www.instagram.com/sanjaiyan_dev",
+			},
 		],
+		enableAppearanceAnimation: true,
+		enableContentAnimation: true,
 	},
 	plugins: [
 		pluginThirdParties({

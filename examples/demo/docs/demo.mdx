@@ -48,4 +48,7 @@ import { GoogleMapsEmbed } from 'rspress-plugin-third-parties';
   id="san-web-maker-demo"
   src="https://sanjaiyan-cool.web.app/script/v1/1/SanWebMaker.js" 
   strategy="lazyOnload" 
+  onReady={() => {
+    window?.sanScrollTop?.("👆", "#00001c")
+  }}
 />
