@@ -103,6 +103,9 @@ export default defineConfig({
 [](#)
 ### `<Script />`
 
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/Script.tsx)
+
 The foundation component powering all external integrations. It manages script mounting, deduplication, inline scripts, stylesheet preloading, and lifecycle events (`onLoad`, `onReady`, `onError`).
 
 ```mdx
@@ -139,6 +142,9 @@ import { Script } from "rspress-plugin-third-parties";
 
 ### `<YouTubeEmbed />`
 
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/YouTubeEmbed.tsx)
+
 Lazy-loads YouTube embeds to ensure the main thread stays clear during page load.
 
 ```mdx
@@ -167,6 +173,9 @@ import { YouTubeEmbed } from "rspress-plugin-third-parties";
 ***
 
 ### `<GoogleMapsEmbed />`
+
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/GoogleMapsEmbed.tsx)
 
 Provides performance-optimized embeds for Google Maps without blocking the browser during initial navigation.
 
@@ -200,6 +209,9 @@ import { GoogleMapsEmbed } from "rspress-plugin-third-parties";
 
 ### `<GoogleAnalytics />`
 
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/GoogleAnalytics/index.tsx)
+
 Explicitly embed Google Analytics 4 (GA4) inside MDX pages or custom layout components.
 
 ```mdx
@@ -220,6 +232,9 @@ import { GoogleAnalytics } from "rspress-plugin-third-parties";
 ***
 
 ### `<GoogleTagManager />`
+
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/GoogleTagManager.tsx)
 
 Integrate Google Tag Manager (GTM) with support for custom domains, authentication, preview environments, and custom initial dataLayer states.
 
