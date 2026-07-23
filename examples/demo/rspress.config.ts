@@ -13,6 +13,7 @@ export default defineConfig({
 		light: "https://avatars.githubusercontent.com/u/88643231",
 		dark: "https://avatars.githubusercontent.com/u/88643231",
 	},
+	logoText: "Rspress Plugin Third Parties ",
 	themeConfig: {
 		socialLinks: [
 			{
