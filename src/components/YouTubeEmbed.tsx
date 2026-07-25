@@ -25,7 +25,7 @@ const safePreconnect = (href: string, options?: PreconnectOptions) => {
 	}
 };
 
-const scriptStrategy = {
+export const scriptStrategy = {
 	server: "beforeInteractive",
 	client: "afterInteractive",
 	idle: "lazyOnload",
@@ -33,9 +33,13 @@ const scriptStrategy = {
 	worker: "lazyOnload",
 } as const;
 
+const youtubePreconnectOpts = {
+	crossOrigin: "",
+} as const;
+
 export function YouTubeEmbed(props: YouTubeEmbedTypes) {
 	const { html, scripts, stylesheets } = TPCYouTubeEmbed(props);
-	safePreconnect("https://cdn.jsdelivr.net", { crossOrigin: "" });
+	safePreconnect("https://cdn.jsdelivr.net", youtubePreconnectOpts);
 
 	return (
 		<ThirdPartyScriptEmbed
