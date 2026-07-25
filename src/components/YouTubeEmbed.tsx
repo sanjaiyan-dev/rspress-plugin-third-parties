@@ -1,7 +1,7 @@
+import ReactDOM from "react-dom";
 import { YouTubeEmbed as TPCYouTubeEmbed } from "third-party-capital";
 import type { ScriptProps } from "./Script";
 import { Script } from "./Script";
-
 import ThirdPartyScriptEmbed from "./ThirdPartyScripts";
 
 export type YouTubeEmbedTypes = {
@@ -11,6 +11,18 @@ export type YouTubeEmbedTypes = {
 	playlabel?: string;
 	params?: string;
 	style?: string;
+};
+
+interface PreconnectOptions {
+	crossOrigin?: "anonymous" | "use-credentials" | "";
+}
+
+const safePreconnect = (href: string, options?: PreconnectOptions) => {
+	const preconnectFn =
+		(ReactDOM as any).preconnect || (ReactDOM as any).experimental_preconnect;
+	if (typeof preconnectFn === "function") {
+		preconnectFn(href, options);
+	}
 };
 
 const scriptStrategy = {
@@ -23,6 +35,7 @@ const scriptStrategy = {
 
 export function YouTubeEmbed(props: YouTubeEmbedTypes) {
 	const { html, scripts, stylesheets } = TPCYouTubeEmbed(props);
+	safePreconnect("https://cdn.jsdelivr.net", { crossOrigin: "" });
 
 	return (
 		<ThirdPartyScriptEmbed
