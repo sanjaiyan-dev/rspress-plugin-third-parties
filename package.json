@@ -4,13 +4,13 @@
 	"description": "Optimized third-party components (YouTube, Google Maps, GA) and script loading strategies for Rspress.",
 	"scripts": {
 		"dev": "rslib build --watch",
-		"build": "rslib build",
+		"build": "NODE_ENV=production rslib build",
 		"format": "biome format --write .",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"typecheck": "tsc --noEmit",
-		"release": "pnpm build && changeset publish",
-		"deploy:demo": "pnpm build && pnpm --filter rspress-plugin-demo build && gh-pages -d examples/demo/doc_build -m 'deploy: demo site'"
+		"release": "NODE_ENV=production pnpm build && changeset publish",
+		"deploy:demo": "NODE_ENV=production pnpm build && NODE_ENV=production pnpm --filter rspress-plugin-demo build && gh-pages -d examples/demo/doc_build -m 'deploy: demo site'"
 	},
 	"keywords": [
 		"rspress",
@@ -80,7 +80,7 @@
 		"@types/node": "^26.1.1",
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
-		"babel-plugin-react-compiler": "^1.0.0",
+		"babel-plugin-react-compiler": "0.0.0-experimental-a1856f3-20260507",
 		"gh-pages": "^6.3.0",
 		"react": "^19.2.8",
 		"react-dom": "^19.2.8",
