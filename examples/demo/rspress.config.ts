@@ -23,6 +23,11 @@ export default defineConfig({
 					"https://github.com/sanjaiyan-dev/rspress-plugin-third-parties",
 			},
 			{
+				icon: "npm",
+				mode: "link",
+				content: "https://www.npmjs.com/package/rspress-plugin-third-parties",
+			},
+			{
 				icon: "instagram",
 				mode: "link",
 				content: "https://www.instagram.com/sanjaiyan_dev",
