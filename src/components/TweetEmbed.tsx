@@ -1,9 +1,10 @@
 import { useDark } from "@rspress/core/runtime";
+import type { ReactNode } from "react";
 import { Tweet, type TweetProps } from "react-tweet";
 
 export type TweetEmbedTypes = TweetProps & {
 	theme?: "light" | "dark";
-	caption?: string;
+	caption?: ReactNode;
 };
 
 export const TweetEmbed = (props: TweetEmbedTypes) => {

@@ -1,5 +1,11 @@
 # rspress-plugin-third-parties
 
+## 2.1.1
+
+### Patch Changes
+
+- update <TweetEmbed> caption prop type from string to ReactNode to allow rich JSX formatting
+
 ## 2.1.0
 
 ### Minor Changes
