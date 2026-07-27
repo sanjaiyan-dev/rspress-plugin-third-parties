@@ -75,7 +75,7 @@ To auto-inject **Google Analytics** globally across your Rspress documentation, 
 ```typescript
 // rspress.config.ts
 import { defineConfig } from "rspress/config";
-import { pluginThirdParties } from "rspress-plugin-third-parties";
+import { pluginThirdParties } from "rspress-plugin-third-parties/plugin";
 
 export default defineConfig({
   plugins: [
