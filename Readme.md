@@ -20,7 +20,7 @@
 
 **`rspress-plugin-third-parties`** brings Next.js-style third-party optimizations (`@next/third-parties`) directly to **Rspress**.
 
-External embeds (like YouTube and Google Maps) and script tags (like GA4 and GTM) are notorious for blocking the main thread, lowering Lighthouse performance scores, and causing layout shifts. This plugin solves that by providing:
+External embeds (like YouTube, Google Maps, and Twitter/X posts) and script tags (like GA4 and GTM) are notorious for blocking the main thread, lowering Lighthouse performance scores, and causing layout shifts. This plugin solves that by providing:
 
 - ⚡ **React Compiler Pre-Optimized**: Ships fully compiled with automated auto-memoization at build-time. Zero unnecessary re-renders.
 - 🚀 **Non-Blocking Execution**: Lazy loading scripts using `requestIdleCallback` and fine-grained loading strategies.
