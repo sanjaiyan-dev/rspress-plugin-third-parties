@@ -1,4 +1,4 @@
-import { GoogleMapsEmbed, YouTubeEmbed, Script } from 'rspress-plugin-third-parties';
+import { GoogleMapsEmbed, YouTubeEmbed, Script, TweetEmbed } from 'rspress-plugin-third-parties';
 
 # rspress-plugin-third-parties Demo
 
@@ -74,4 +74,17 @@ import { Script } from 'rspress-plugin-third-parties';
     window?.sanScrollTop?.("👆", "#00001c")
   }}
 />
+```
+
+
+---
+
+## 🐦 Zero-Overhead Tweet Embed
+
+<TweetEmbed id="2017178323550605790" />
+
+```mdx
+import { TweetEmbed } from 'rspress-plugin-third-parties';
+
+<TweetEmbed id="2017178323550605790" theme="light" />
 ```
