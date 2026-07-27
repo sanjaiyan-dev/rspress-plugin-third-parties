@@ -17,7 +17,7 @@
 
 **`rspress-plugin-third-parties`** brings Next.js-style third-party optimizations (`@next/third-parties`) directly to **Rspress**.
 
-External embeds (like YouTube and Google Maps) and script tags (like GA4 and GTM) are notorious for blocking the main thread, lowering Lighthouse performance scores, and causing layout shifts. This plugin solves that by providing:
+External embeds (like YouTube, Google Maps, and Twitter/X posts) and script tags (like GA4 and GTM) are notorious for blocking the main thread, lowering Lighthouse performance scores, and causing layout shifts. This plugin solves that by providing:
 
 - ⚡ **React Compiler Pre-Optimized**: Ships fully compiled with automated auto-memoization at build-time. Zero unnecessary re-renders.
 - 🚀 **Non-Blocking Execution**: Lazy loading scripts using `requestIdleCallback` and fine-grained loading strategies.
@@ -36,6 +36,7 @@ External embeds (like YouTube and Google Maps) and script tags (like GA4 and GTM
   - [`<Script />`](#script-)
   - [`<YouTubeEmbed />`](#youtubeembed-)
   - [`<GoogleMapsEmbed />`](#googlemapsembed-)
+  - [`<TweetEmbed />`](#tweetembed-)
   - [`<GoogleAnalytics />`](#googleanalytics-)
   - [`<GoogleTagManager />`](#googletagmanager-)
 - [Event Tracking Utility](#event-tracking-utility)
@@ -81,7 +82,7 @@ To auto-inject **Google Analytics** globally across your Rspress documentation, 
 ```typescript
 // rspress.config.ts
 import { defineConfig } from "rspress/config";
-import { pluginThirdParties } from "rspress-plugin-third-parties";
+import { pluginThirdParties } from "rspress-plugin-third-parties/plugin";
 
 export default defineConfig({
   plugins: [
@@ -145,7 +146,7 @@ import { Script } from "rspress-plugin-third-parties";
 
 [Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/YouTubeEmbed.tsx)
 
-Lazy-loads YouTube embeds to ensure the main thread stays clear during page load.
+Powered by `lite-youtube-embed` under the hood. Renders an ultra-fast visual facade that defers the heavy YouTube player until play is clicked—keeping your main thread pristine and Lighthouse scores flawless.
 
 ```mdx
 import { YouTubeEmbed } from "rspress-plugin-third-parties";
@@ -204,6 +205,43 @@ import { GoogleMapsEmbed } from "rspress-plugin-third-parties";
 | `language` | `string`                                                        | —            | Map language code (e.g. `'ta'`, `'en'`).       |
 | `region`   | `string`                                                        | —            | Regional country code.                         |
 | `loading`  | `"eager" \| "lazy"`                                             | `'lazy'`     | Native iframe loading attribute.               |
+
+***
+
+### `<TweetEmbed />`
+
+
+[Source Code](https://github.com/sanjaiyan-dev/rspress-plugin-third-parties/blob/main/src/components/TweetEmbed.tsx)
+
+Zero-overhead Twitter/X post embed powered by `react-tweet`. Fetches raw post data and renders lightweight, native React DOM components styled identically to X/Twitter UI without downloading heavy `widgets.js` scripts or layout-shifting IFrames.
+
+```mdx
+import { TweetEmbed } from "rspress-plugin-third-parties";
+
+{/* Basic Tweet */}
+<TweetEmbed id="2017178323550605790" />
+
+{/* Tweet with optional forced theme */}
+<TweetEmbed 
+  id="2017178323550605790" 
+  theme="dark" 
+/>
+
+```
+
+#### `<TweetEmbed />` Props
+
+| Prop           | Type                  | Default     | Description                                                                             |
+| :------------- | :-------------------- | :---------- | :-------------------------------------------------------------------------------------- |
+| `id`           | `string`              | —           | The Tweet / X Post ID (extracted from tweet URL).                                       |
+| `theme`        | `"light" \| "dark"`   | `useDark()` | Optional theme override. Inherits Rspress reactive theme if omitted.                    |
+| `caption`      | `ReactNode`           | —           | Optional accessible caption rendered in a `<figcaption>` tag beneath the tweet.         |
+| `apiUrl`       | `string`              | —           | Custom proxy API URL for fetching raw tweet data.                                       |
+| `fallback`     | `ReactNode`           | —           | Loading skeleton component rendered while tweet payload is being fetched.               |
+| `components`   | `TwitterComponents`   | —           | Custom UI component overrides for tweet elements (e.g. custom avatar, media, or links). |
+| `fetchOptions` | `RequestInit`         | —           | Custom `fetch` headers or request configuration sent to the tweet API.                  |
+| `onError`      | `(error: any) => any` | —           | Callback function fired if tweet data fetching or rendering fails.                      |
+| `className`    | `string`              | —           | Additional CSS class names applied to the container `<figure>` element.                 |
 
 ***
 

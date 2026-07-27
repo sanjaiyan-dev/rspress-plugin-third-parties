@@ -36,6 +36,17 @@ import { YouTubeEmbed } from 'rspress-plugin-third-parties';
 
 ***
 
+## 🐦 Zero-Overhead Tweet Embed
+
+
+```mdx
+import { TweetEmbed } from 'rspress-plugin-third-parties';
+
+<TweetEmbed id="2017178323550605790" />
+```
+
+***
+
 ## ⚡ Custom Script Component
 
 
