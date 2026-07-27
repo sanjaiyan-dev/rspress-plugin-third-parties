@@ -39,6 +39,7 @@ External embeds (like YouTube, Google Maps, and Twitter/X posts) and script tags
   - [`<Script />`](#script-)
   - [`<YouTubeEmbed />`](#youtubeembed-)
   - [`<GoogleMapsEmbed />`](#googlemapsembed-)
+  - [`<TweetEmbed />`](#tweetembed-)
   - [`<GoogleAnalytics />`](#googleanalytics-)
   - [`<GoogleTagManager />`](#googletagmanager-)
 - [Event Tracking Utility](#event-tracking-utility)
