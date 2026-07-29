@@ -1,5 +1,5 @@
 ---
-url: /rspress-plugin-third-parties/demo.md
+url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/demo.md
 ---
 
 # rspress-plugin-third-parties Demo
@@ -70,7 +70,7 @@ import { Script } from 'rspress-plugin-third-parties';
 
 
 ---
-url: /rspress-plugin-third-parties/index.md
+url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/index.md
 ---
 
 # Rspress Third Parties
@@ -93,7 +93,7 @@ High-Performance Third-Party Integrations
 
 
 ---
-url: /rspress-plugin-third-parties/readme.md
+url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/readme.md
 ---
 
 # `rspress-plugin-third-parties`

@@ -4,5 +4,5 @@
 
 ## Others
 
-- [rspress-plugin-third-parties Demo](/rspress-plugin-third-parties/demo.md): Welcome to the live interactive demo site for rspress-plugin-third-parties!
-- [rspress-plugin-third-parties](/rspress-plugin-third-parties/readme.md)
+- [rspress-plugin-third-parties Demo](https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/demo.md): Welcome to the live interactive demo site for rspress-plugin-third-parties!
+- [rspress-plugin-third-parties](https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/readme.md)
