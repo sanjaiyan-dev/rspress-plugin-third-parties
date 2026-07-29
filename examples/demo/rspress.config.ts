@@ -17,7 +17,7 @@ export default defineConfig({
 			{
 				property: "og:image",
 				content:
-					"https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/og-image.png",
+					"https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/rspress-plugin-third-party-hero.png",
 			},
 		],
 	],
