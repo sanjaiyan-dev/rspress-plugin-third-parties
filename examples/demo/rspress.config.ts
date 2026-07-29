@@ -5,14 +5,22 @@ import { pluginThirdParties } from "rspress-plugin-third-parties/plugin";
 export default defineConfig({
 	root: path.join(__dirname, "docs"),
 	title: "Rspress Third Parties Demo",
+	siteOrigin: "https://sanjaiyan-dev.github.io",
 	base: "/rspress-plugin-third-parties/",
 	llms: true,
 	description: "Live interactive playground for rspress-plugin-third-parties",
-	icon: "https://avatars.githubusercontent.com/u/88643231",
-	logo: {
-		light: "https://avatars.githubusercontent.com/u/88643231",
-		dark: "https://avatars.githubusercontent.com/u/88643231",
-	},
+	icon: "/rspress-plugin-third-party-icon.png",
+	logo: "/rspress-plugin-third-party-icon.png",
+	head: [
+		[
+			"meta",
+			{
+				property: "og:image",
+				content:
+					"https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/og-image.png",
+			},
+		],
+	],
 	logoText: "Rspress Plugin Third Parties",
 	themeConfig: {
 		socialLinks: [
