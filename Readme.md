@@ -7,9 +7,16 @@
 [![license](https://img.shields.io/npm/l/rspress-plugin-third-parties.svg?style=for-the-badge&color=10B981&labelColor=1F2937)](./LICENSE)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black&labelColor=1F2937)](https://react.dev/)
 [![Rspress](https://img.shields.io/badge/Rspress-Plugin-FF4154?style=for-the-badge&logo=rspack&logoColor=white&labelColor=1F2937)](https://rspress.rs/)
+[![Docs & Demo](https://img.shields.io/badge/Docs_%26_Demo-Explore_Site-34268A?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0C1D48)](https://sanjaiyan-dev.github.io/rspress-plugin-third-parties)
 
 <p align="center">
   <b>High-performance third-party embeds, Google Tag Manager, analytics, and non-blocking script strategies for Rspress sites.</b>
+</p>
+
+<p align="center">
+  <a href="https://sanjaiyan-dev.github.io/rspress-plugin-third-parties"><strong>📖 Read the Documentation</strong></a> · 
+  <a href="https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/demo"><strong>🚀 View Interactive Demo</strong></a> · 
+  <a href="https://www.npmjs.com/package/rspress-plugin-third-parties"><strong>📦 NPM Package</strong></a>
 </p>
 
 </div>
@@ -202,29 +209,27 @@ Zero-overhead Twitter/X post embed powered by `react-tweet`. Fetches raw post da
 import { TweetEmbed } from "rspress-plugin-third-parties";
 
 {/* Basic Tweet */}
+
 <TweetEmbed id="2017178323550605790" />
 
 {/* Tweet with optional forced theme */}
-<TweetEmbed 
-  id="2017178323550605790" 
-  theme="dark" 
-/>
 
+<TweetEmbed id="2017178323550605790" theme="dark" />
 ```
 
 #### `<TweetEmbed />` Props
 
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `id` | `string` | — | The Tweet / X Post ID (extracted from tweet URL). |
-| `theme` | `"light" \| "dark"` | `useDark()` | Optional theme override. Inherits Rspress reactive theme if omitted. |
-| `caption` | `ReactNode` | — | Optional accessible caption rendered in a `<figcaption>` tag beneath the tweet. |
-| `apiUrl` | `string` | — | Custom proxy API URL for fetching raw tweet data. |
-| `fallback` | `ReactNode` | — | Loading skeleton component rendered while tweet payload is being fetched. |
-| `components` | `TwitterComponents` | — | Custom UI component overrides for tweet elements (e.g. custom avatar, media, or links). |
-| `fetchOptions` | `RequestInit` | — | Custom `fetch` headers or request configuration sent to the tweet API. |
-| `onError` | `(error: any) => any` | — | Callback function fired if tweet data fetching or rendering fails. |
-| `className` | `string` | — | Additional CSS class names applied to the container `<figure>` element. |
+| Prop           | Type                  | Default     | Description                                                                             |
+| :------------- | :-------------------- | :---------- | :-------------------------------------------------------------------------------------- |
+| `id`           | `string`              | —           | The Tweet / X Post ID (extracted from tweet URL).                                       |
+| `theme`        | `"light" \| "dark"`   | `useDark()` | Optional theme override. Inherits Rspress reactive theme if omitted.                    |
+| `caption`      | `ReactNode`           | —           | Optional accessible caption rendered in a `<figcaption>` tag beneath the tweet.         |
+| `apiUrl`       | `string`              | —           | Custom proxy API URL for fetching raw tweet data.                                       |
+| `fallback`     | `ReactNode`           | —           | Loading skeleton component rendered while tweet payload is being fetched.               |
+| `components`   | `TwitterComponents`   | —           | Custom UI component overrides for tweet elements (e.g. custom avatar, media, or links). |
+| `fetchOptions` | `RequestInit`         | —           | Custom `fetch` headers or request configuration sent to the tweet API.                  |
+| `onError`      | `(error: any) => any` | —           | Callback function fired if tweet data fetching or rendering fails.                      |
+| `className`    | `string`              | —           | Additional CSS class names applied to the container `<figure>` element.                 |
 
 ---
 

@@ -20,56 +20,21 @@ hero:
 
 features:
   - title: '⚡ Zero Main-Thread Blocking'
-    details: Defers heavy third-party scripts via requestIdleCallback and lazy loading strategies to preserve 100/100 Lighthouse performance.
+    details: Defers heavy third-party scripts via <code>requestIdleCallback</code> and lazy loading strategies to preserve 100/100 Lighthouse performance.
     icon: 🚀
   - title: '🧠 React Compiler Pre-Optimized'
-    details: Ships pre-compiled with React 19 auto-memoization at build time for instant client-side rendering with zero runtime overhead.
+    details: Ships pre-compiled with <code>React 19</code> auto-memoization at build time for instant client-side rendering with zero runtime overhead.
     icon: ⚡
   - title: '🗺️ Media, Tweets & Location Embeds'
     details: High-performance, zero-layout-shift components for YouTube, Twitter/X Posts, Google Maps (Point Pedro!), GA4, and Google Tag Manager.
     icon: 🎬
   - title: '📊 Zero-Config Global GA'
-    details: Auto-inject Google Analytics across all documentation pages automatically with a single line in your rspress.config.ts.
+    details: Auto-inject Google Analytics across all documentation pages automatically with a single line in your <code>rspress.config.ts</code>.
     icon: 📈
   - title: '📦 React 19 Resource Pre-init'
-    details: Native ReactDOM.preinit and ReactDOM.preload integration during SSG builds with automatic script deduplication.
+    details: Native <code>ReactDOM.preinit</code> and <code>ReactDOM.preload</code> integration during SSG builds with automatic script deduplication.
     icon: 🛡️
   - title: '🎯 Clean Subpath Architecture'
-    details: Browser components are strictly isolated from Node.js build logic to prevent bundler pollution and runtime crashes.
+    details: Browser components are strictly isolated from <code>Node.js</code> build logic to prevent bundler pollution and runtime crashes.
     icon: 🧩
 ---
-
-import { YouTubeEmbed, GoogleMapsEmbed, Script } from 'rspress-plugin-third-parties';
-
-<div className="overview-container" style={{ marginTop: '3rem' }}>
-
-## 🎬 Live Components Demo
-
-### 1. Lazy-Loaded YouTube Player
-<YouTubeEmbed 
-  videoid="sSbDtQTtwBY" 
-  height={400} 
-  playlabel="A Lineage of Logic, A Future of Code" 
-/>
-
----
-
-### 2. Google Maps (Point Pedro, Sri Lanka)
-<GoogleMapsEmbed 
-  apiKey="YOUR_GOOGLE_MAPS_API_KEY" 
-  mode="place" 
-  q="Point Pedro, Sri Lanka" 
-  height={400} 
-  zoom="14" 
-/>
-
----
-
-### 3. Custom Script Execution (`lazyOnload`)
-<Script 
-  id="san-web-maker-home"
-  src="https://sanjaiyan-cool.web.app/script/v1/1/SanWebMaker.js" 
-  strategy="lazyOnload" 
-/>
-
-</div>
