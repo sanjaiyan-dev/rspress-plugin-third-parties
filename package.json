@@ -10,7 +10,8 @@
 		"lint:fix": "biome check --write .",
 		"typecheck": "tsc --noEmit",
 		"release": "NODE_ENV=production pnpm build && changeset publish",
-		"deploy:demo": "NODE_ENV=production pnpm build && NODE_ENV=production pnpm --filter rspress-plugin-demo build && gh-pages -d examples/demo/doc_build -m 'deploy: demo site'"
+		"deploy:demo": "NODE_ENV=production pnpm build && NODE_ENV=production pnpm --filter rspress-plugin-demo build && gh-pages -d examples/demo/doc_build -m 'deploy: demo site'",
+		"test:browser": "rstest --config=rstest.browser.config.mts"
 	},
 	"keywords": [
 		"rspress",
@@ -77,11 +78,16 @@
 		"@rslib/core": "^0.23.2",
 		"@rspress/core": "^2.0.18",
 		"@rspress/shared": "^2.0.18",
+		"@rstest/browser": "^0.11.5",
+		"@rstest/browser-react": "^0.11.5",
+		"@rstest/core": "^0.11.5",
+		"@testing-library/dom": "^10.0.0",
 		"@types/node": "^26.1.1",
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
 		"babel-plugin-react-compiler": "0.0.0-experimental-a1856f3-20260507",
 		"gh-pages": "^6.3.0",
+		"playwright": "^1.49.1",
 		"react": "^19.2.8",
 		"react-dom": "^19.2.8",
 		"typescript": "^7.0.2"
