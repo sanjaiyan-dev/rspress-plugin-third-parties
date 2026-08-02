@@ -57,10 +57,14 @@ export function GoogleTagManager(props: GTMParams) {
 		scriptUrl.searchParams.set("gtm_cookies_win", "x");
 	}
 
+	const key = gtmId || scriptUrl.href;
+	const initId = `_rspress-gtm-init-${key}`;
+	const scriptId = `_rspress-gtm-${key}`;
+
 	return (
 		<>
 			<Script
-				id="_rspress-gtm-init"
+				id={initId}
 				dangerouslySetInnerHTML={{
 					__html: `
       (function(w,l){
@@ -71,7 +75,7 @@ export function GoogleTagManager(props: GTMParams) {
 				}}
 				nonce={nonce}
 			/>
-			<Script id="_rspress-gtm" src={scriptUrl.href} nonce={nonce} />
+			<Script id={scriptId} src={scriptUrl.href} nonce={nonce} />
 		</>
 	);
 }
