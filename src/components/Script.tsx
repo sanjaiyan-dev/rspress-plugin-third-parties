@@ -127,6 +127,9 @@ const loadScript = (props: ScriptProps): void => {
 	}
 
 	const el = document.createElement("script");
+	if (id) {
+		el.id = id;
+	}
 
 	const loadPromise = new Promise<Event>((resolve, reject) => {
 		el.addEventListener("load", function (e) {
