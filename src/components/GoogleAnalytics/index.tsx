@@ -18,10 +18,12 @@ export function GoogleAnalytics(props: GAParams) {
 		currDataLayerName = dataLayerName;
 	}
 
+	const initId = gaId ? `_rspress-ga-init-${gaId}` : "_rspress-ga-init";
+
 	return (
 		<>
 			<Script
-				id="_rspress-ga-init"
+				id={initId}
 				dangerouslySetInnerHTML={{
 					__html: `
             window['${dataLayerName}'] = window['${dataLayerName}'] || [];
@@ -33,7 +35,6 @@ export function GoogleAnalytics(props: GAParams) {
 				nonce={nonce}
 			/>
 			<Script
-				id="_rspress-ga"
 				src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
 				nonce={nonce}
 			/>
