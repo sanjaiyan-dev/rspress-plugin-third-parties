@@ -1,5 +1,11 @@
 # rspress-plugin-third-parties
 
+## 2.1.2
+
+### Patch Changes
+
+- fix: assign script id in DOM, dynamic IDs for GTM and GA to prevent LoadCache collisions, and add React Compiler compliant useEffect state initialization
+
 ## 2.1.1
 
 ### Patch Changes
