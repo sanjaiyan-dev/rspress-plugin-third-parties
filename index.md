@@ -1,3 +1,5 @@
+> For AI agents: the complete documentation index is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms.txt, the full documentation bundle is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms-full.txt.
+
 # Rspress Third Parties
 
 High-Performance Third-Party Integrations

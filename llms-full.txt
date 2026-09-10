@@ -2,6 +2,8 @@
 url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/demo.md
 ---
 
+> For AI agents: the complete documentation index is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms.txt, the full documentation bundle is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms-full.txt.
+
 # rspress-plugin-third-parties Demo
 
 Welcome to the live interactive demo site for **`rspress-plugin-third-parties`**!
@@ -73,6 +75,8 @@ import { Script } from 'rspress-plugin-third-parties';
 url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/index.md
 ---
 
+> For AI agents: the complete documentation index is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms.txt, the full documentation bundle is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms-full.txt.
+
 # Rspress Third Parties
 
 High-Performance Third-Party Integrations
@@ -95,6 +99,8 @@ High-Performance Third-Party Integrations
 ---
 url: https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/readme.md
 ---
+
+> For AI agents: the complete documentation index is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms.txt, the full documentation bundle is available at https://sanjaiyan-dev.github.io/rspress-plugin-third-parties/llms-full.txt.
 
 # `rspress-plugin-third-parties`
 
