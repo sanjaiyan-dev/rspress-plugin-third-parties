@@ -8,9 +8,9 @@
 		"preview": "rspress preview"
 	},
 	"dependencies": {
-		"rspress-plugin-third-parties": "workspace:*",
-		"@rspress/core": "^2.0.18",
+		"@rspress/core": "^2.0.21",
 		"react": "^19.2.8",
-		"react-dom": "^19.2.8"
+		"react-dom": "^19.2.8",
+		"rspress-plugin-third-parties": "workspace:*"
 	}
 }
